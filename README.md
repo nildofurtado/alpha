@@ -84,6 +84,7 @@ git clone https://github.com/nildofurtado/alpha.git
 ```
 ### 2. Instalar as Dependências:
 ```
+cd functions
 npm install
 ```
 ### 3. Configurar o Firebase CLI::
