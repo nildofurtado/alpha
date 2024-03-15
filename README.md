@@ -57,22 +57,22 @@ https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.ex
 
 * Instalação NVM (automatic).
 ```bash
- $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 * Teste NVM
 
 ```bash
-  $ nvm -v
+  nvm -v
 ```
 * Instalação Node.JS
 
 ```bash
-  nvm install latest
+  nvm install node
 ```
 
 * Teste seu NODEJS instalado no linux.
 ```bash
-  $ node -v
+  node -v
 ```
 
 
@@ -80,7 +80,7 @@ https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.ex
 
 ### 1. Clonar o Repositório:
 ```
-git clone https://github.com/nildofurtado/projeto-alpha.git
+git clone https://github.com/nildofurtado/alpha.git
 ```
 ### 2. Instalar as Dependências:
 ```
@@ -117,7 +117,7 @@ Neste projeto, implementamos testes unitários abrangentes para garantir a quali
 npm install --save-dev jest
 npm install --save-dev supertest
 
-/caminho/pasta/functions $jest
+/caminho/pasta/functions$ jest
 ```
 
 ### Recursos Adicionais:
