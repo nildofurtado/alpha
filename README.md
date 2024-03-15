@@ -115,18 +115,18 @@ Para instalar o Firebase CLI globalmente, execute o seguinte comando:
 npm install -g firebase-tools
 ```
 
-### 2. Inicie o emulador do Firebase:
+### 4. Inicie o emulador do Firebase:
 ```bash
 firebase emulators:start
 ```
-### 3.Acesse o URL do emulador em seu navegador:
+### 5. Acesse o URL do emulador em seu navegador:
 ```bash
 http://localhost:4000 ou http://localhost:5001
 ```
 
 + Você verá a interface do emulador do Firebase, onde você pode gerenciar seus projetos, bancos de dados e outras configurações.
 
-### 3.Acesse via Postman:
+### 6. Acesse via Postman:
 #### Para realizar o teste da api:
 ```bash
 Endpoint: http://127.0.0.1:5001/projeto-alpha-2e025/us-central1/createRecord
