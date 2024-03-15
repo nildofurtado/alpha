@@ -117,7 +117,7 @@ Neste projeto, implementamos testes unitários abrangentes para garantir a quali
 npm install --save-dev jest
 npm install --save-dev supertest
 
-/caminho/pasta/functions/jest
+/caminho/pasta/functions $jest
 ```
 
 ### Recursos Adicionais:
