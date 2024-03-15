@@ -87,10 +87,29 @@ git clone https://github.com/nildofurtado/alpha.git
 cd functions
 npm install
 ```
+### 2. Instalando JDK 
+#### Faça download no link abaixo:
+```
+[Debian / Ubuntu ]: https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
+```
+### Instale o pacote usando o seguinte comando:
+```
+cd /tmp
+sudo dkpg -i jdk-21_linux-x64_bin.deb   ou  sudo apt install ./jdk-21_linux-x64_bin.deb
+```
+### Os arquivos do Java Development Kit são instalados no diretório. 
++ Por exemplo, as versões do JDK 21 para x64 serão instaladas no diretório. /usr/lib/jvm/jdk-<FEATURE>-oracle-<ARCH>/usr/lib/jvm/jdk-21-oracle-x64
+
+### Validar versão: 
+```
+java --version
+```
+
 ### 3. Configurar o Firebase CLI::
 ### 3.1. Instalação do Firebase CLI:
 
 Para instalar o Firebase CLI globalmente, execute o seguinte comando:
++ **Atenção**: Permaneça na pasta **functions/** para rodar os seguintes comandos abaixo.  
 
 ```bash
 npm install -g firebase-tools
@@ -105,18 +124,33 @@ firebase emulators:start
 http://localhost:4000 ou http://localhost:5001
 ```
 
-Você verá a interface do emulador do Firebase, onde você pode gerenciar seus projetos, bancos de dados e outras configurações.
++ Você verá a interface do emulador do Firebase, onde você pode gerenciar seus projetos, bancos de dados e outras configurações.
 
-### 3.Acesse o URL do emulador em seu navegador:
+### 3.Acesse via Postman:
+#### Para realizar o teste da api:
 ```bash
-http://localhost:4000 ou http://localhost:5001
+Endpoint: http://127.0.0.1:5001/projeto-alpha-2e025/us-central1/createRecord
+
+Json: { name: <string> } 
+
+
+````
+#### Teste via terminal Linux
+```bash
+# /createRecord/:name
+curl -X POST --location "http://127.0.0.1:5001/projeto-alpha-2e025/us-central1/createRecord" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d "{
+          \"name\": \"<sctring>\",
+        }"
 ```
 ## Testes Unitários
 Neste projeto, implementamos testes unitários abrangentes para garantir a qualidade e a confiabilidade do código. Os testes unitários são escritos usando o framework Jest. Esses testes desempenham um papel fundamental em nossa abordagem de desenvolvimento, garantindo que nosso software seja robusto e estável em todas as circunstâncias.
 
 ```bash
-npm install --save-dev jest
-npm install --save-dev supertest
+npm install -g jest
+npm install -g supertest
 
 /caminho/pasta/functions$ jest
 ```
